@@ -1,11 +1,11 @@
 package dao;
 
 import java.sql.Connection;
-import java.sql.Date;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.time.LocalDate;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -57,7 +57,9 @@ public class MySqlClienteDAO implements ClienteDAO {
 		PreparedStatement pstm = null;
 		int salida = -1;
 		try {			
-			String sql = "update cliente set nombre = ? , apellido = ?, correo = ?, fecha = ? , dni = ? where idcliente = ? ";
+			String sql = "update cliente set nombre = ? , apellido = ?, "
+					+ "correo = ?, fecha = ? , dni = ? "
+					+ "where idcliente = ? ";
 			conn = MySqlDBConexion.getConexion();
 			pstm = conn.prepareStatement(sql);			
 			pstm.setString(1, obj.getNombre());

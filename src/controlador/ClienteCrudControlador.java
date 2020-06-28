@@ -102,7 +102,7 @@ public class ClienteCrudControlador extends HttpServlet {
 				request.getSession().setAttribute("REGISTRO", "registro exitoso");
 				request.getSession().setAttribute("message", "success");
 
-			} else if(s < 0) {
+			} else  {
 
 				request.getSession().setAttribute("REGISTRO", "registro erróneo");
 				request.getSession().setAttribute("message", "danger");
