@@ -189,7 +189,7 @@
 												<div class="col-lg-5">
 													<input class="form-control" id="id_reg_apellido"
 														name="apellido" placeholder="Apellido" type="text"
-														maxlength="40" />
+														maxlength="30" />
 												</div>
 											</div>
 
@@ -197,7 +197,7 @@
 												<label class="col-lg-3 control-label" for="id_reg_correo">Correo</label>
 												<div class="col-lg-5">
 													<input class="form-control" id="id_reg_correo"
-														name="correo" placeholder="Correo@" 
+														name="correo" placeholder="xxx.xxx.xxx@xxx.xx" 
 														maxlength="40" />
 												</div>
 											</div>
@@ -207,7 +207,7 @@
 													de Nacimiento</label>
 												<div class="col-lg-5">
 													<input class="form-control" id="id_reg_fecha" name="fecha"
-														placeholder="1000/10/10" type="text" />
+														placeholder="1000-10-10" type="text" />
 												</div>
 											</div>
 
@@ -217,7 +217,7 @@
 												<label class="col-lg-3 control-label" for="id_reg_dni">DNI</label>
 												<div class="col-lg-5">
 													<input class="form-control" id="id_reg_dni" name="dni"
-														placeholder="Ingrese" type="text" maxlength="8" />
+														placeholder="Ingrese su DNI" type="text" maxlength="8" />
 												</div>
 											</div>
 
@@ -294,7 +294,7 @@
 												<div class="col-lg-5">
 													<input class="form-control" id="id_act_apellido"
 														name="apellido" placeholder="Apellido" type="text"
-														maxlength="40" />
+														maxlength="30" />
 												</div>
 											</div>
 
@@ -302,7 +302,7 @@
 												<label class="col-lg-3 control-label" for="id_act_correo">Correo</label>
 												<div class="col-lg-5">
 													<input class="form-control" id="id_act_correo"
-														name="correo" placeholder="Correo@" maxlength="40" />
+														name="correo" placeholder="xxx.xxx.xxx@xxx.xx" maxlength="40" />
 												</div>
 											</div>
 
@@ -312,7 +312,7 @@
 													de Nacimiento</label>
 												<div class="col-lg-5">
 													<input class="form-control" id="id_act_fecha" name="fecha"
-														placeholder="1000/10/10" type="text" />
+														placeholder="1000-12-31" type="text" />
 												</div>
 											</div>
 
@@ -321,7 +321,7 @@
 												<label class="col-lg-3 control-label" for="id_act_dni">DNI</label>
 												<div class="col-lg-5">
 													<input class="form-control" id="id_act_dni" name="dni"
-														placeholder="Ingrese" type="text" maxlength="8" />
+														placeholder="Ingrese su DNI" type="text" maxlength="8" />
 												</div>
 											</div>
 
@@ -437,8 +437,9 @@
 											message : "El nombre es obligatorio"
 										},
 										stringLength : {
-											message : "El nombre debe contener min 4 letras",
-											min : 4
+											message : "El nombre debe contener min 3 letras max 30",
+											min : 3,
+											max : 30
 										}
 									}
 								},
@@ -450,8 +451,9 @@
 											message : "El apellido es obligatorio"
 										},
 										stringLength : {
-											message : "El apellido debe contener min 4 letras",
-											min : 4
+											message : "El apellido debe contener min 3 letras max 30",
+											min : 3,
+											max : 30
 										}
 									}
 								},
@@ -503,7 +505,7 @@
 																				 }*/
 										regexp : {
 														
-											regexp : /^([a-zA-Z0-9]{3})+\.+([a-zA-Z0-9]{3})+\.+([a-zA-Z0-9]{3})+@[a-zA-Z0-9]+\.([a-zA-Z]{1,3})+\.([a-zA-Z]{1,2})$/,
+											regexp : /^([a-zA-Z0-9]{3})+([.]{1})([a-zA-Z0-9]{3})+([.]{1})([a-zA-Z0-9]{3})@([a-zA-Z0-9]{3})+\.([a-zA-Z]{2})$/,
 
 											message : 'Formato invalido'
 										}
@@ -564,9 +566,9 @@
 										},
 										regexp : {
 
-											regexp : /^([a-zA-Z0-9]{3})+\.+([a-zA-Z0-9]{3})+\.+([a-zA-Z0-9]{3})+@[a-zA-Z0-9]+\.([a-zA-Z]{1,3})+\.([a-zA-Z]{1,2})$/,
+											regexp : /^([a-zA-Z0-9]{3})+([.]{1})([a-zA-Z0-9])+([.]{1})([a-zA-Z0-9]{3})@([a-zA-Z0-9]{3})+\.([a-zA-Z]{2})$/,
 
-											message : 'Formato invalido'
+											message : 'Formato invalido ss'
 										}
 									}
 								},
